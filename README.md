@@ -7,4 +7,3 @@ Project Names:
 3. Rock Paper Scissors
 4. Choose your own adventure
 5. Password Manager 
-6. SQL Basics (SQL FILe) Extra
