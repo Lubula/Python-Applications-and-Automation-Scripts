@@ -1,0 +1,51 @@
+print("Welcome To My First Game! How To Make A Decison! ")
+name = input("What is Your Name? ")
+age = input("How old ore you? ")
+Intuition = 0
+
+if int(age) >= 14:
+    print("You Are Old Enough! I wonder if you are mature enough though?")
+    wants_to_play = input("Do you want to play? ").lower()
+    if wants_to_play =="yes":
+        print("Welcome", name, "your", age, "years Old. I wonder how mature though? Your level of intuintion is at", Intuition, "%")
+        print("Lets Begin!!")
+
+        first_choice = input(" What do you depend on to make a decision? Head or Heart (Head/Heart)? ").lower()
+        if first_choice == "heart":
+            ans = input("Heart = Intuition! Do you identify the problem or define the problem? (define/Identify)")
+            Intuition += 35
+
+            if ans == "identify":
+                print("recognizing that something is not as it should be, Key first step.")
+                Intuition += 15
+            
+            elif ans == "define": 
+                print("clearly understand the nature of the issue, its scope, and its underlying causes")
+                Intuition += 5
+
+            ans = input("Now gather information & evaluate options. Do you then take action or make a decision? (action/decide) ")
+            if ans == "decide": 
+                print("Making a decision is the Key, Your Gaining Intuition")
+                Intuition += 10
+                if Intuition >= 30:
+                    print("Your Intuition at", Intuition, "% Well done!")
+
+            elif ans == "action":
+                print("Being too hasty, decide then take action! Parmount to understand")
+                Intuition -= 10
+
+                if Intuition <= 30:
+                    print("Your intuition level less than 30% GAME OVER")
+                else:
+                    print("Your Intuition at", Intuition, "Well done!")
+
+            else:
+                print("Your lost now. You can't take action without making a decision first critcal error! GAME OVER <RESTART>")
+
+        else:
+            print("Trust your Intuition & Follow Your Heart More, leave the data crunching to the calculators. GAME OVER < RESTART >")
+
+    else:
+        print("BYE")
+else:
+    print("Still To Young To Play!")
