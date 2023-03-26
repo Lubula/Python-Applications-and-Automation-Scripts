@@ -1,0 +1,51 @@
+#lets first welcome the user to the game
+print("Welcome to a my mini games, Lets see how good you are, lets play Quiz 1: Guessing game")
+Score = 0
+
+#lets add in input(), to prompt the user whetether they wah to play or not
+user_prompt = input("Do you want to Play? ").lower()
+
+# what the user types in becomes the the input saved on the user_prompt
+# if they user types "Yes" we begin the game, if the type "no" we quit the game (we'll use the quit function)
+
+if user_prompt == "yes":
+    print("Okay! Lets play :)")
+else:
+    quit()
+
+# lets use the input() fuction to get info from the user
+ans_1 = input("what is the nearest star to planet earth? ").lower()
+if ans_1 == "sun":
+    print("Your brilliant, correct!") # if the user gets it wong lets go with else statement
+    Score += 1
+else:
+    print("Oh No, thats wrong. Stop looking down at your smartphone look up at the sky see the sun:)")
+
+# lets add 4 more questions. 
+# change the statement from ans_1 to answe2 so details are stored. 
+ans_2 = input("How many colors in a rainbow? ")
+if ans_2 == "7":
+    print("Your brilliant, corect!") # if the user gets it wong lets go with else statement
+    Score += 1
+else:
+    print("Oh No, thats wrong.  Look at the Rainbow more and count a little more :) ")
+
+# change the statement from ans_2 to ans_3 so details are stored. 
+ans_3 = input("In what direction does the sunrise? ").lower()
+if ans_3 =="east":
+    print("Your brilliant, corect!") # if the user gets it wong lets go with else statement)
+    Score += 1
+else:
+    print("Oh No, thats wrong.  Maybe your still sleepy in the morning to know you dircetions in the morning :( ")
+
+ans_4 = input("How many weeks are in one year? ")
+if ans_4 == "52":
+    print("Your brilliant, corect!") # if the user gets it wong lets go with else statement
+    Score += 1
+else:
+    print("Oh No, thats wrong.  Time to find the calender :( ")
+
+#add the score together
+#dont really need to state ans_1, or Ans_2 can simply use ans as variable.
+# just to make easier to understand 
+print("Your Score: ", Score, "Out of 4")
