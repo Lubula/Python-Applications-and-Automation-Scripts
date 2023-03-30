@@ -1,0 +1,13 @@
+# generate a word replacement program
+# take a string and replaces a specific word / phrase with another word 
+# great for a large amount of texts / data
+# simple line of code but a big deal when dealing with large amounnt of text and data 
+
+def word_replacer():
+
+    str = " Nsansa Inc and Nsansa Homes"
+    word_to_replace = input("Enter the Word to Replace: ")
+    word_replacement = input("Enter the word replacement: ")
+    print(str.replace(word_to_replace, word_replacement))
+
+word_replacer()
