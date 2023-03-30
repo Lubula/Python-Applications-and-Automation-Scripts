@@ -6,3 +6,6 @@ Project Names:
 2. Number Guessing game
 3. Rock Paper Scissors
 4. Decsion tree Game
+5. Word replacer
+6. Email slicier
+7. Basic Calculator
