@@ -1,0 +1,56 @@
+# create a basic calculator
+# define the functions needed: add, sub, divide, multiply
+# print options to user and ask foor values 
+# call the functions then add a y loop to contine until user wants to quit
+
+def add(a, b):
+    ans = a + b
+    print(str(a), "+", str(b), "=", str(ans))
+
+def sub(a, b):
+    ans = a - b
+    print(str(a), "-", str(b), "=", str(ans))
+
+def mult(a, b):
+    ans = a * b
+    print(str(a), "*", str(b), "=", str(ans))
+
+def div(a, b):
+    ans = a / b
+    print(str(a), "/", str(b), "=", str(ans))
+
+# print out the options for the user
+# add a y loop  to entire code so it continues running until e is pressed 
+while True:
+    print("A. Addition")
+    print("B. Subtraction")
+    print("C. Multiplication")
+    print("D. Divsion")
+    print("E. Exit")
+
+    # variable to collect the values is needed 
+    choice = input("input your choice: ").lower()
+
+    if choice == "a":
+        print("Addition")
+        a = int(input("Input your first number: "))
+        b = int(input("Input your second number: "))
+        add(a,b)
+    elif choice == "b":
+        print("Subtraction")
+        a = int(input("Input your first number: "))
+        b = int(input("Input your second number: "))
+        sub(a,b)
+    elif choice == "c":
+        print("Multiplication")
+        a = int(input("Input your first number: "))
+        b = int(input("Input your second number: "))
+        mult(a,b)
+    elif choice == "d":
+        print("Divsion")
+        a = int(input("Input your first number: "))
+        b = int(input("Input your second number: "))
+        div(a,b)
+    elif choice == "e":
+        print("Program Ended")
+        quit()
