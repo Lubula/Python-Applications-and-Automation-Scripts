@@ -9,3 +9,7 @@ Project Names:
 5. Word replacer
 6. Email slicier
 7. Basic Calculator
+8. Random Password generator
+9. intrest rate calculator
+10. Quiz program
+11. binary serach alogorithim
