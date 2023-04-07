@@ -13,3 +13,5 @@ Project Names:
 9. intrest rate calculator
 10. Quiz program
 11. binary serach alogorithim
+12. Currency converter
+13. Word dictionary
