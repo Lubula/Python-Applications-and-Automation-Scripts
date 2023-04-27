@@ -1,24 +1,24 @@
-# simple dictionary
-# python dictionary that has a key value pair that represents a word and definition
-# collect input from user, input is word
-# check if word in dictionary
-# print the definition
+# Define a dictionary with word-definition pairs
+word_dict = { 
+    "maat": "Egyptian Goddess of Harmony and Balance",
+    "atum": "The Creator God",
+    "medu netcher": "The Language of God"
+}
 
-def main():
-    word_dict = { 
-        "maat": "Egyptian Goddess of Harmony and Balance",
-        "atum": "THe Creator God",
-        "medu netcher" : "The Language of God"
-    }
+# Continuously prompt user for input until 'exit' is entered
+while True:
+    # Collect input from user, input is word
+    word = input("Enter a word (type 'exit' to quit): ")
     
-    while True:
-        word = input("Enter a word: ")
-        if word == "":
-            break
-        if word in word_dict:
-            print(word,":", word_dict[word])
+    # If the user enters 'exit', exit the loop
+    if word.lower() == 'exit':
+        print("Goodbye!")
+        break
 
-main()
-
-# add a file that has the text for the diction or use a python library 
-# import py dictionary as this has already been created 
+    # Check if word is in dictionary
+    if word in word_dict:
+        # Print the definition
+        print(f"{word}: {word_dict[word]}")
+    else:
+        # If the word is not in the dictionary, inform the user
+        print(f"Sorry, the word '{word}' is not in the dictionary.")
