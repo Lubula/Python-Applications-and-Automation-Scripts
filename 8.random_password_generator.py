@@ -1,37 +1,30 @@
-# ask user if they want to generate a password
-# if yes, request passwprd length
-# generate the password
-# print the program
-# if initial reponse is no, exit no
-
 import string
 import random
 
-characters = list(string.ascii_letters + string.digits + "!@#$%^&*()")
+# Using string.printable for the character pool
+characters = list(string.printable)
 
-# function that generates password
-# make sure the characters are shuffled
 def generate_password():
-    password_length = int(input("How long would you like the password to be ?"))
+    while True:
+        try:
+            password_length = int(input("How long would you like the password to be? "))
+            if password_length <= 0:
+                print("Please enter a positive integer for password length.")
+            else:
+                break
+        except ValueError:
+            print("Invalid input. Please enter a valid integer.")
 
     random.shuffle(characters)
+    password = random.choices(characters, k=password_length)
 
-    password = []
-
-    for x in range(password_length):
-        password.append(random.choice(characters))
-    
-    random.shuffle(password)
-
-    password = "".join(password)
-    print(password) 
+    print("Generated Password:", "".join(password))
 
 option = input("Do you want to generate a password? (Yes/No): ").lower()
 
 if option == "yes":
     generate_password()
 elif option == "no":
-    print("Program ended")
-    quit()
+    print("Program ended.")
 else:
-    print("Invalid Input please print Yes or No")
+    print("Invalid input. Please enter Yes or No.")
