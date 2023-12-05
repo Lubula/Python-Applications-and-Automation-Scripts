@@ -7,7 +7,7 @@ word_dict = {
 
 # Continuously prompt user for input until 'exit' is entered
 while True:
-    # Collect input from user, input is word
+    # Collect input from user; the input is a word
     word = input("Enter a word (type 'exit' to quit): ")
     
     # If the user enters 'exit', exit the loop
@@ -15,9 +15,9 @@ while True:
         print("Goodbye!")
         break
 
-    # Check if word is in dictionary
+    # Check if the word is in the dictionary
     if word in word_dict:
-        # Print the definition
+        # If the word is found, print the definition
         print(f"{word}: {word_dict[word]}")
     else:
         # If the word is not in the dictionary, inform the user
