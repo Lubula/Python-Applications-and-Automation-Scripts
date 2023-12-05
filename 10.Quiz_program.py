@@ -1,66 +1,61 @@
-# dictionary that contains a list of questions (quiz)
-# generate the score to all correct questions (a counter)
-# a dictionary that stores questions and ansers
-# a variable that tracks the scroe (a counter)
-# loop through the dictionary that usesd the key value pairs
-# display each question to the user and allow them to the user
-# display if they are right or wrong 
-
-quiz= {
+# Dictionary that contains a list of questions (quiz)
+quiz = {
     "question1": {
-        "question": "what is the capital of France?",
+        "question": "What is the capital of France?",
         "answer": "Paris"
     },
     "question2": {
-        "question": "what is the capital of Italy?",
+        "question": "What is the capital of Italy?",
         "answer": "Rome"
     },
     "question3": {
-        "question": "what is the capital of Spain?",
+        "question": "What is the capital of Spain?",
         "answer": "Madrid"
     },
     "question4": {
-        "question" : "what is the capital of Germany?",
+        "question": "What is the capital of Germany?",
         "answer": "Berlin"
     },
-     "question5": {
-        "question": "what is the capital of Ghana?",
+    "question5": {
+        "question": "What is the capital of Ghana?",
         "answer": "Accra"
     },
     "question6": {
-        "question": "what is the capital of Zambia?",
+        "question": "What is the capital of Zambia?",
         "answer": "Lusaka"
     },
     "question7": {
-        "question": "what is the capital of Austria?",
+        "question": "What is the capital of Austria?",
         "answer": "Vienna"
     },
     "question8": {
-        "question": "what is the capital of Portugal?",
+        "question": "What is the capital of Portugal?",
         "answer": "Lisbon"
     },
 }
 
-# variable that tracks score
+# Variable that tracks score
 score = 0
 
-# loop through a dictionary
+# Loop through the dictionary
 for key, value in quiz.items():
+    # Display the question to the user
     print(value['question'])
+    
+    # Allow the user to input an answer
     answer = input("Answer? ")
 
+    # Check if the answer is correct
     if answer.lower() == value['answer'].lower():
         print('Correct')
         score += 1
-        print("Your score is: ", str(score))
-        print("")
-        print("")
     else:
-        print("wrong !")
-        print("The answer is: ", value["answer"])
-        print("Your score is: ", str(score))
-        print("")
-        print("")
+        print("Wrong! The correct answer is:", value["answer"])
 
-print("You got" + str(score)+ "out of 7 qestions correctly")
-print("Yor percentage is " + str(int(score/7 *100)) + "%")
+    # Display the current score
+    print("Your score is:", score)
+    print("\n" + "-" * 30 + "\n")  # Separator for better readability
+
+# Display the final score
+print("You got", str(score), "out of", len(quiz), "questions correctly")
+print("Your percentage is", str(int(score / len(quiz) * 100)) + "%")
