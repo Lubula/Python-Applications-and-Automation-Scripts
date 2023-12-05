@@ -1,21 +1,24 @@
-# collect the necessary inputs: principal, apr,years
-# calculate the monthly repayment
-# show the user
+def calculate_monthly_payment(principal, annual_interest_rate, years):
+    monthly_interest_rate = (annual_interest_rate / 100) / 12
+    total_payments = years * 12
+
+    monthly_payment = principal * (monthly_interest_rate * (1 + monthly_interest_rate)**total_payments) / \
+                      ((1 + monthly_interest_rate)**total_payments - 1)
+
+    return monthly_payment
 
 def main():
     print("This is the monthly repayment Calculator")
     print("")
 
     principal = float(input("Input the Loan Amount: "))
-    monthly_intrest_rate = float(input("Input the annual intrest rate: "))
+    annual_interest_rate = float(input("Input the annual interest rate: "))
     years = int(input("Input the amount of years: "))
 
-    amount_of_months = years * 12
-    monthly_payments = principal / 1000 *10.16 
+    monthly_payment = calculate_monthly_payment(principal, annual_interest_rate, years)
 
-    print("The Monthly Repayment Amount For This Loan Is : " + str(monthly_payments))
-    print("Over the duration of", amount_of_months, "Months")
-    print("At an interst rate of", monthly_intrest_rate, "%")
-    print("Disclaimer: only calculates the repayment of loan amount at 11.5% over 20years")
+    print(f"The Monthly Repayment Amount For This Loan Is: {monthly_payment:.2f}")
+    print(f"Over the duration of {years} Years")
+    print(f"At an interest rate of {annual_interest_rate}%")
 
 main()
