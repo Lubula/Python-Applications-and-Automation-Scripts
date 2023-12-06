@@ -1,17 +1,10 @@
-# Mini_Python_Projects
-My Mini Python Projects
+# Python_Projects-Novice
 
-Project Names:
-1. Mini Quiz
-2. Number Guessing game
-3. Rock Paper Scissors
-4. Decsion tree Game
-5. Word replacer
-6. Email slicier
-7. Basic Calculator
-8. Random Password generator
-9. intrest rate calculator
-10. Quiz program
-11. binary serach alogorithim
-12. Currency converter
-13. Word dictionary
+1. Choice Game (decision tree gamme)
+2. General quiz
+3. Intrest Rate Calculator
+4. Lucky 13 Game 
+5. Email Slicer
+6. Basic Calculator
+7. Random Password generator
+8. 
