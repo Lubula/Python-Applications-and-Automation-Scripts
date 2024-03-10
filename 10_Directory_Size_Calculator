@@ -1,0 +1,19 @@
+# Recursive Script: Directory Size Calculator
+# recursively calculates the total size of a directory and its subdirectories.
+# Companies often need to analyze storage usage for various purposes such as capacity planning and optimization. 
+# This script provides a simple way to recursively calculate directory sizes, making it a handy tool for sysadmins and DevOps engineers
+
+import os
+
+def calculate_directory_size(directory):
+    total_size = 0
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            file_path = os.path.join(root, file)
+            total_size += os.path.getsize(file_path)
+    return total_size
+
+# Usage
+directory_path = "/path/to/directory"
+total_size_bytes = calculate_directory_size(directory_path)
+print(f"Total size of {directory_path}: {total_size_bytes} bytes")
