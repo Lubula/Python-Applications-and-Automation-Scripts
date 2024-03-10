@@ -12,3 +12,5 @@
 10. Cursive Script: Directory Size Calculator
 11. ConfigParser
 12. Automating The Deployment Process
+13. 13_Web_scraping_basics
+
