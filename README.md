@@ -1,6 +1,6 @@
 # Python_Projects-Novice
 
-1. Choice Game (decision tree gamme)
+1. Choice Game : decision tree game
 2. General quiz
 3. Intrest Rate Calculator
 4. Lucky 13 Game 
@@ -10,7 +10,7 @@
 8. Automation Script: File Backup
 9. Configuration Script: JSON Configuration Loader
 10. Cursive Script: Directory Size Calculator
-11. ConfigParser
-12. Automating The Deployment Process
-13. 13_Web_scraping_basics
+11. Configuration Parser
+12. Automating Scripts: The Deployment Process
+13. Web Scraping Basics: Using Beautiful Soup and Pandas 
 
