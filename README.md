@@ -7,4 +7,6 @@
 5. Email Slicer
 6. Basic Calculator
 7. Random Password generator
-8. 
+8. Automation Script: File Backup
+9. Configuration Script: JSON Configuration Loader
+10. Cursive Script: Directory Size Calculator
