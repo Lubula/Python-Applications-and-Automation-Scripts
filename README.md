@@ -10,3 +10,4 @@
 8. Automation Script: File Backup
 9. Configuration Script: JSON Configuration Loader
 10. Cursive Script: Directory Size Calculator
+11. ConfigParser
