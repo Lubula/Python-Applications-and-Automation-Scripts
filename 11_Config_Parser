@@ -1,0 +1,28 @@
+# Used for managing configuration files in the INI file format
+# ConfigParser provides a simple and intuitive API for managing configuration files.
+# INI Format: INI files are widely used for configuration due to their human-readable and straightforward syntax.
+# ConfigParser supports hierarchical configurations with sections and keys, allowing for organized and structured configuration files.
+# Commonly used in various applications and systems for managing configuration settings, a popular choice for configuration management in Python projects.
+
+import configparser
+
+class Configuration:
+    def __init__(self, config_file):
+        self.config = configparser.ConfigParser()
+        self.config.read(config_file)
+    
+    def get_value(self, section, key):
+        return self.config.get(section, key)
+
+# Usage
+config_file_path = "/path/to/config.ini"
+config = Configuration(config_file_path)
+database_host = config.get_value("Database", "host")
+database_port = config.get_value("Database", "port")
+username = config.get_value("Credentials", "username")
+password = config.get_value("Credentials", "password")
+
+print(f"Database Host: {database_host}")
+print(f"Database Port: {database_port}")
+print(f"Username: {username}")
+print(f"Password: {password}")
