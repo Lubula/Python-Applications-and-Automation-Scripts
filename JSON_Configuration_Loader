@@ -1,0 +1,27 @@
+# Configuration Script: JSON Configuration Loader
+# loads configuration settings from a JSON file and provides an interface to access them
+# Using JSON for configuration allows for easy readability and modification of settings. 
+# This script abstracts away the complexity of reading and accessing configuration data, making it a popular choice for various applications
+
+import json
+
+class Configuration:
+    def __init__(self, config_file):
+        self.config = self.load_config(config_file)
+    
+    def load_config(self, config_file):
+        try:
+            with open(config_file, 'r') as f:
+                config_data = json.load(f)
+            return config_data
+        except Exception as e:
+            print(f"Error loading configuration: {e}")
+            return {}
+    
+    def get_config(self, key):
+        return self.config.get(key)
+
+# Usage
+config_file_path = "/path/to/config.json"
+config = Configuration(config_file_path)
+print(config.get_config("database_host"))
