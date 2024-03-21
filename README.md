@@ -13,5 +13,7 @@
 10. Cursive Script: Directory Size Calculator
 11. Configuration Parser
 12. Automating Scripts: The Deployment Process
-13. Web Scraping Basics: Using Beautiful Soup and Pandas 
+13. Web Scraping Basics: Using Beautiful Soup and Pandas
+14. Task Management App
+15. Weather Api Application
 
